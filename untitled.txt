@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Babbal Property Dealing</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0; padding: 0;
+    background: #f4f4f4;
+    text-align: center;
+  }
+  nav {
+    background: #333;
+    padding: 10px 0;
+  }
+  nav button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  nav button:hover {
+    background: #0056b3;
+  }
+  section {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ccc;
+    text-align: left;
+  }
+  .page-button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .page-button:hover {
+    background: #1e7e34;
+  }
+  h2 {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <button onclick="showPage('home')">Home</button>
+  <button onclick="showPage('about')">About</button>
+  <button onclick="showPage('services')">Services</button>
+  <button onclick="showPage('blog')">Blog</button>
+  <button onclick="showPage('contact')">Contact</button>
+</nav>
+
+<section id="content">
+
+</section>
+
+<script>
+  const pages = {
+    home: {
+      title: "Babbal Property Dealing",
+      content: `
+        <p><strong>Welcome to Babbal Property Dealing!</strong></p>
+        <p>Hum aapko behtareen properties dilane mein madad karte hain, chahe wo ghar ho, zameen ho, ya commercial property. </p>
+        <p>Apni sapno ki property kharidna ya bechna ab asaan hua hai. Hamare paas har budget ke hisaab se options maujood hain.</p>
+        <p><strong>Specialties:</strong></p>
+        <ul>
+          <li>Trusted Deals</li>
+          <li>Transparent Pricing</li>
+          <li>Best Locations</li>
+          <li>Customer Satisfaction</li>
+        </ul>
+      `,
+      buttonText: "Home Button",
+      buttonAction: () => alert("Aap Home page par hain!")
+    },
+    about: {
+      title: "About Property Business",
+      content: `
+        <p>Property business me safalta ka raaz hai <strong>imandari</strong> aur <strong>sahi samay</strong> par sahi faisle lena.</p>
+        <p>Ek achha property dealer apne grahak ki zarurat ko samajhta hai aur unke liye behtareen options laata hai.</p>
+        <p>Market ki knowledge aur updated rehna aapko har competition me aage rakhta hai.</p>
+        <p><em>"Property mein investment, aapke kal ki suraksha hai."</em></p>
+      `,
+      buttonText: "About Button",
+      buttonAction: () => alert("Yeh About page hai!")
+    },
+    services: {
+      title: "Our Services",
+      content: `
+        <p>Hamari services me shamil hain:</p>
+        <ul>
+          <li>Sasti aur achi residential properties</li>
+          <li>Commercial properties saste daam me</li>
+          <li>Property legal advice</li>
+          <li>Assistance in buying & selling</li>
+        </ul>
+        <p>Hamari koshish hai ki har customer ko sabse behtareen deal mile, bina jhanjhat ke.</p>
+        <p><strong>Affordable prices, guaranteed quality!</strong></p>
+      `,
+      buttonText: "Services Button",
+      buttonAction: () => alert("Sevaon ke baare mein jaankari!")
+    },
+    blog: {
+      title: "Blog",
+      content: `
+        <p>Sikhne aur badhne ka koi ant nahi hai. Hamare blog me roz naye tips aur gyaan paayiye.</p>
+      `,
+      buttonText: "Blog Button",
+      buttonAction: () => alert("Blog page me aapka swagat hai!")
+    },
+    contact: {
+      title: "Contact Us",
+      content: `
+        <p><strong>Mobile:</strong> +91 98765 43210</p>
